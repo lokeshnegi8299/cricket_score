@@ -15,6 +15,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.State
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.KeyboardOptions
+import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.text.input.KeyboardOptions
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.text.input.KeyboardType
@@ -42,8 +46,22 @@ fun MatchSetupScreen(
         item {
             Text(
                 text = "Quick Match Setup",
+                style = MaterialTheme.typography.headlineSmall,
+                fontWeight = FontWeight.Bold
+            )
+        }
+
+        item {
+            Text(
+                text = "No login. No internet. Start scoring in seconds.",
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
                 style = MaterialTheme.typography.headlineSmall
             )
+        }
+
+        item {
+            SectionTitle("Team Setup")
         }
 
         item {
@@ -64,6 +82,10 @@ fun MatchSetupScreen(
                 label = { Text("Team 2 Name") },
                 singleLine = true
             )
+        }
+
+        item {
+            SectionTitle("Match Rules")
         }
 
         item {
@@ -113,6 +135,15 @@ fun MatchSetupScreen(
             }
         }
     }
+}
+
+@Composable
+private fun SectionTitle(title: String) {
+    Text(
+        text = title,
+        style = MaterialTheme.typography.titleMedium,
+        fontWeight = FontWeight.SemiBold
+    )
 }
 
 @Composable
