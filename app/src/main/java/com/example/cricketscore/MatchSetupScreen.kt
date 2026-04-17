@@ -19,6 +19,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardOptions
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.text.input.KeyboardOptions
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.text.input.KeyboardType
 
 @Composable
 fun MatchSetupScreen(
@@ -53,6 +56,7 @@ fun MatchSetupScreen(
                 text = "No login. No internet. Start scoring in seconds.",
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
+                style = MaterialTheme.typography.headlineSmall
             )
         }
 
